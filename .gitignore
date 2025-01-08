@@ -1,0 +1,17 @@
+﻿# Ignoriranje Visual Studio foldera
+.vs/
+
+# Ignoriranje privremenih datoteka i foldera
+bin/
+obj/
+*.user
+*.suo
+
+# Ignoriranje konfiguracijskih datoteka
+*.log
+*.tmp
+*.ide
+
+# Ignoriranje datoteka specifičnih za OS
+.DS_Store
+Thumbs.db
