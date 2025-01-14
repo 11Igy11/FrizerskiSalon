@@ -1,0 +1,24 @@
+﻿@model IEnumerable<FrizerskiSalon1.Models.Reservation>
+
+<h2>Rezervacije</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Datum</th>
+            <th>Termin</th>
+            <th>Usluga</th>
+            <th>Korisnik</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reservation in Model)
+        {
+            <tr>
+                <td>@reservation.ReservationDate.ToString("dd/MM/yyyy")</td>  <!-- Koristi ReservationDate -->
+                <td>@reservation.TimeSlot</td>
+                <td>@reservation.Service.Name</td>
+                <td>@reservation.User.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>

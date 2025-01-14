@@ -6,12 +6,15 @@ namespace FrizerskiSalon1.Models
     {
         public int Id { get; set; } // Primarni ključ
 
-        [Required(ErrorMessage = "Termin rezervacije je obavezan.")]
-        public string TimeSlot { get; set; } = string.Empty; // Termin rezervacije
+        [Required(ErrorMessage = "Ime klijenta je obavezno.")]
+        public string CustomerName { get; set; } = string.Empty; // Ime klijenta
 
         [DataType(DataType.Date)]
         [Required(ErrorMessage = "Datum rezervacije je obavezan.")]
-        public DateTime Date { get; set; } // Datum rezervacije
+        public DateTime ReservationDate { get; set; } // Datum rezervacije
+
+        [Required(ErrorMessage = "Termin rezervacije je obavezan.")]
+        public string TimeSlot { get; set; } = string.Empty; // Termin rezervacije
 
         // Strani ključ za korisnika
         public int UserId { get; set; }
